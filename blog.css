@@ -1,0 +1,155 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    float: right;
+    margin-right: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.blog-post {
+    background: #fff;
+    padding: 20px;
+    width: calc(33% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+}
+
+.blog-post h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.blog-post .date {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.blog-post .excerpt {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .blog-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-post {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .blog-posts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-post {
+        width: 100%;
+    }
+}
